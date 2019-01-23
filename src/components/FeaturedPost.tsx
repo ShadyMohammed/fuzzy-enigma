@@ -1,16 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import { ContentfulFeaturedPost } from '../graphql-types';
 
-interface props {
-  isRed?: boolean;
-}
-
-const Header = styled('h1')<props>`
-  color: red;
-  background: ${p => (p.isRed ? 'red' : 'green')};
-`;
+import Tag from './Tag';
 
 const FeaturedPost: React.FunctionComponent = () => {
   return (
@@ -20,7 +14,17 @@ const FeaturedPost: React.FunctionComponent = () => {
         const { post }: ContentfulFeaturedPost = data;
         return (
           <>
-            <Header>{post.title}</Header>
+            <Image
+              // @ts-ignore
+              fluid={post.featuredImage.fluid}
+              backgroundColor="blue"
+              alt={post.title}
+            />
+            <Tag
+              title={post.category.title}
+              categorySlug={post.category.slug}
+            />
+            <h1>{post.title}</h1>
             <div>{post.description.childMarkdownRemark.excerpt}</div>
           </>
         );
@@ -38,6 +42,15 @@ const query = graphql`
           childMarkdownRemark {
             excerpt(truncate: true)
           }
+        }
+        featuredImage {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        }
+        category {
+          title
+          slug
         }
       }
     }

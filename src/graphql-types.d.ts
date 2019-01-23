@@ -237,6 +237,8 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
 
   color?: Maybe<SitePageConnectionPluginCreatorPluginOptionsColorQueryString>;
 
+  google?: Maybe<SitePageConnectionPluginCreatorPluginOptionsGoogleInputObject>;
+
   name?: Maybe<SitePageConnectionPluginCreatorPluginOptionsNameQueryString>;
 
   short_name?: Maybe<
@@ -557,6 +559,26 @@ export interface SitePageConnectionPluginCreatorPluginOptionsLinkImagesToOrigina
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsGoogleInputObject {
+  families?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsGoogleFamiliesQueryList
+  >;
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsGoogleFamiliesQueryList {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -1281,6 +1303,8 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
 
   color?: Maybe<SitePluginConnectionPluginOptionsColorQueryString_2>;
 
+  google?: Maybe<SitePluginConnectionPluginOptionsGoogleInputObject_2>;
+
   name?: Maybe<SitePluginConnectionPluginOptionsNameQueryString_2>;
 
   short_name?: Maybe<SitePluginConnectionPluginOptionsShortNameQueryString_2>;
@@ -1581,6 +1605,24 @@ export interface SitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoole
 }
 
 export interface SitePluginConnectionPluginOptionsColorQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePluginConnectionPluginOptionsGoogleInputObject_2 {
+  families?: Maybe<SitePluginConnectionPluginOptionsGoogleFamiliesQueryList_2>;
+}
+
+export interface SitePluginConnectionPluginOptionsGoogleFamiliesQueryList_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5801,6 +5843,8 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
 
   color?: Maybe<SitePagePluginCreatorPluginOptionsColorQueryString>;
 
+  google?: Maybe<SitePagePluginCreatorPluginOptionsGoogleInputObject>;
+
   name?: Maybe<SitePagePluginCreatorPluginOptionsNameQueryString>;
 
   short_name?: Maybe<SitePagePluginCreatorPluginOptionsShortNameQueryString>;
@@ -6101,6 +6145,24 @@ export interface SitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBool
 }
 
 export interface SitePagePluginCreatorPluginOptionsColorQueryString {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsGoogleInputObject {
+  families?: Maybe<SitePagePluginCreatorPluginOptionsGoogleFamiliesQueryList>;
+}
+
+export interface SitePagePluginCreatorPluginOptionsGoogleFamiliesQueryList {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -6773,6 +6835,8 @@ export interface SitePluginPluginOptionsInputObject_2 {
 
   color?: Maybe<SitePluginPluginOptionsColorQueryString_2>;
 
+  google?: Maybe<SitePluginPluginOptionsGoogleInputObject_2>;
+
   name?: Maybe<SitePluginPluginOptionsNameQueryString_2>;
 
   short_name?: Maybe<SitePluginPluginOptionsShortNameQueryString_2>;
@@ -7069,6 +7133,24 @@ export interface SitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
 }
 
 export interface SitePluginPluginOptionsColorQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface SitePluginPluginOptionsGoogleInputObject_2 {
+  families?: Maybe<SitePluginPluginOptionsGoogleFamiliesQueryList_2>;
+}
+
+export interface SitePluginPluginOptionsGoogleFamiliesQueryList_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -11069,6 +11151,7 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
   PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
   PluginOptionsColor = "pluginOptions___color",
+  PluginOptionsGoogleFamilies = "pluginOptions___google___families",
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
@@ -11116,6 +11199,7 @@ export enum sitePluginDistinctEnum {
   PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
   PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
   PluginOptionsColor = "pluginOptions___color",
+  PluginOptionsGoogleFamilies = "pluginOptions___google___families",
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
@@ -11158,6 +11242,7 @@ export enum sitePluginGroupEnum {
   PluginOptionsBackgroundColor = "pluginOptions___backgroundColor",
   PluginOptionsLinkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
   PluginOptionsColor = "pluginOptions___color",
+  PluginOptionsGoogleFamilies = "pluginOptions___google___families",
   PluginOptionsName = "pluginOptions___name",
   PluginOptionsShortName = "pluginOptions___short_name",
   PluginOptionsStartUrl = "pluginOptions___start_url",
@@ -11834,6 +11919,8 @@ export interface PluginOptions_3 {
 
   color?: Maybe<string>;
 
+  google?: Maybe<Google_2>;
+
   name?: Maybe<string>;
 
   short_name?: Maybe<string>;
@@ -11875,6 +11962,10 @@ export interface PluginOptions_4 {
   backgroundColor?: Maybe<string>;
 
   linkImagesToOriginal?: Maybe<boolean>;
+}
+
+export interface Google_2 {
+  families?: Maybe<(Maybe<string>)[]>;
 }
 
 export interface PackageJson_2 {
