@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Header from './Header';
+import Nav from './Nav';
 
 interface IProps {}
 
@@ -16,20 +16,11 @@ const Layout: React.FunctionComponent<IProps> = ({ children }) => {
           }
         }
       `}
-      render={data => (
-        <>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: 0
-            }}
-          >
-            {children}
-          </div>
-        </>
+      render={() => (
+        <div>
+          <Nav />
+          {children}
+        </div>
       )}
     />
   );
