@@ -10,7 +10,10 @@ export const theme = {
 };
 
 export const sizes = {
-  DESKTOP: 992,
-  TABLET: 768,
-  PHONE: 576
+  LG_SCREEN: 1200,
+  DESKTOP: 1025,
+  LG_TABLET: 900,
+  TABLET: 720,
+  PHONE: 576,
+  SM_PHONE: 425
 };
