@@ -145,8 +145,6 @@ export interface SitePageConnectionPluginCreatorInputObject {
 
   packageJson?: Maybe<SitePageConnectionPluginCreatorPackageJsonInputObject>;
 
-  parent?: Maybe<SitePageConnectionPluginCreatorParentQueryString>;
-
   internal?: Maybe<SitePageConnectionPluginCreatorInternalInputObject>;
 }
 
@@ -1003,20 +1001,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersi
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface SitePageConnectionPluginCreatorParentQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -5759,8 +5743,6 @@ export interface SitePagePluginCreatorInputObject {
 
   packageJson?: Maybe<SitePagePluginCreatorPackageJsonInputObject>;
 
-  parent?: Maybe<SitePagePluginCreatorParentQueryString>;
-
   internal?: Maybe<SitePagePluginCreatorInternalInputObject>;
 }
 
@@ -6573,20 +6555,6 @@ export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryStr
 }
 
 export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface SitePagePluginCreatorParentQueryString {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -11089,7 +11057,6 @@ export enum SitePageConnectionSortByFieldsEnum {
   PluginCreatorId = "pluginCreatorId",
   ComponentPath = "componentPath",
   Id = "id",
-  Parent = "parent",
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalDescription = "internal___description",
@@ -11112,7 +11079,6 @@ export enum sitePageDistinctEnum {
   PluginCreatorId = "pluginCreatorId",
   ComponentPath = "componentPath",
   Id = "id",
-  Parent = "parent",
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalDescription = "internal___description",
@@ -11130,7 +11096,6 @@ export enum sitePageGroupEnum {
   PluginCreatorId = "pluginCreatorId",
   ComponentPath = "componentPath",
   Id = "id",
-  Parent = "parent",
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalDescription = "internal___description",
@@ -11174,7 +11139,6 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PackageJsonDevDependencies = "packageJson___devDependencies",
   PackageJsonPeerDependencies = "packageJson___peerDependencies",
   PackageJsonKeywords = "packageJson___keywords",
-  Parent = "parent",
   InternalContentDigest = "internal___contentDigest",
   InternalType = "internal___type",
   InternalOwner = "internal___owner"
@@ -11222,7 +11186,6 @@ export enum sitePluginDistinctEnum {
   PackageJsonDevDependencies = "packageJson___devDependencies",
   PackageJsonPeerDependencies = "packageJson___peerDependencies",
   PackageJsonKeywords = "packageJson___keywords",
-  Parent = "parent",
   InternalContentDigest = "internal___contentDigest",
   InternalType = "internal___type",
   InternalOwner = "internal___owner"
@@ -11265,7 +11228,6 @@ export enum sitePluginGroupEnum {
   PackageJsonDevDependencies = "packageJson___devDependencies",
   PackageJsonPeerDependencies = "packageJson___peerDependencies",
   PackageJsonKeywords = "packageJson___keywords",
-  Parent = "parent",
   InternalContentDigest = "internal___contentDigest",
   InternalType = "internal___type",
   InternalOwner = "internal___owner"

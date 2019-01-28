@@ -5,7 +5,7 @@ import { ThemeProvider } from 'emotion-theming';
 import { globalStyles, theme } from '../styles';
 import SEO from '../components/Seo';
 import Layout from '../components/Layout';
-import FeaturedPost from '../components/FeaturedPost';
+import FeaturedSection from '../components/FeaturedSection';
 
 const IndexPage: React.FunctionComponent<{}> = () => {
   return (
@@ -17,7 +17,7 @@ const IndexPage: React.FunctionComponent<{}> = () => {
           keywords={[`gatsby`, `application`, `react`]}
           description="Index for something I can't remember?!"
         />
-        <FeaturedPost />
+        <FeaturedSection />
       </Layout>
     </ThemeProvider>
   );

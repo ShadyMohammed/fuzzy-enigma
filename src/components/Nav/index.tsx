@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import Image from 'gatsby-image';
+import Helmet from 'react-helmet';
 
 import { sizes } from '../../styles';
 import LogoWrapper from './components/LogoWrapper';
@@ -32,31 +33,36 @@ class Nav extends Component<{}, IState> {
     this.state = {
       isHamburgerMenuOpen: false
     };
-
-    this.toggleHamburgerMenuDisplay = this.toggleHamburgerMenuDisplay.bind(
-      this
-    );
   }
 
-  toggleHamburgerMenuDisplay() {
+  toggleHamburgerMenuDisplay = () => {
     this.setState(prevState => ({
       isHamburgerMenuOpen: !prevState.isHamburgerMenuOpen
     }));
-  }
+  };
 
   render() {
     const { isHamburgerMenuOpen } = this.state;
     return (
-      <StyledNav>
-        <LogoWrapper>
-          <span>Logo</span>
-        </LogoWrapper>
-        <NavMenu isHamburgerMenuOpen={isHamburgerMenuOpen} />
-        <NavSearch />
-        <MenuIcon onClick={this.toggleHamburgerMenuDisplay}>
-          {isHamburgerMenuOpen ? 'x' : 'Menu'}
-        </MenuIcon>
-      </StyledNav>
+      <>
+        <Helmet
+          bodyAttributes={{
+            style: isHamburgerMenuOpen
+              ? 'overflow: hidden; -webkit-overflow-scrolling: touch;'
+              : 'overflow: auto; -webkit-overflow-scrolling: auto'
+          }}
+        />
+        <StyledNav>
+          <LogoWrapper>
+            <span>Logo</span>
+          </LogoWrapper>
+          <NavMenu isHamburgerMenuOpen={isHamburgerMenuOpen} />
+          <NavSearch />
+          <MenuIcon onClick={this.toggleHamburgerMenuDisplay}>
+            {isHamburgerMenuOpen ? 'x' : 'Menu'}
+          </MenuIcon>
+        </StyledNav>
+      </>
     );
   }
 }

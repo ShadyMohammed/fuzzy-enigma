@@ -1,10 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import { ContentfulFeaturedPost } from '../graphql-types';
+import styled from '@emotion/styled';
+import { ContentfulFeaturedPost } from '../../../graphql-types';
 
-import Tag from './Tag';
+import { sizes } from '../../../styles';
+import Tag from '../../Tag';
+
+const StyledFeaturedPost = styled.div`
+  grid-column: start / end;
+
+  @media screen and (min-width: ${sizes.TABLET}px) {
+    grid-column: start / span 6;
+  }
+`;
 
 const FeaturedPost: React.FunctionComponent = () => {
   return (
@@ -13,7 +22,7 @@ const FeaturedPost: React.FunctionComponent = () => {
       render={({ contentfulFeaturedPost: data }) => {
         const { post }: ContentfulFeaturedPost = data;
         return (
-          <>
+          <StyledFeaturedPost>
             <Image
               // @ts-ignore
               fluid={post.featuredImage.fluid}
@@ -26,7 +35,7 @@ const FeaturedPost: React.FunctionComponent = () => {
             />
             <h1>{post.title}</h1>
             <div>{post.description.childMarkdownRemark.excerpt}</div>
-          </>
+          </StyledFeaturedPost>
         );
       }}
     />
