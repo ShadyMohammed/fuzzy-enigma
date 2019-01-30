@@ -7,17 +7,26 @@ import Tag from '../Tag';
 import { sizes } from '../../styles';
 
 const categoryPost = css`
-  grid-column: span 1;
   margin-bottom: 5%;
 
   @media screen and (min-width: ${sizes.SM_PHONE}px) {
-    grid-column: span 1;
+    max-width: 45%;
+  }
+
+  @media screen and (min-width: ${sizes.PHONE}px) {
+    max-width: 47.5%;
+  }
+  
+  @media screen and(min-width: ${sizes.TABLET}px) {
+    max-width: 42.5%
+  }
+
+  @media screen and (min-width: ${sizes.DESKTOP}px) {
+    max-width: 22.5%;
   }
 `;
 
 const postImageWrapper = css`
-  /* width: 100%;
-  height: 100%; */
   margin-bottom: 0.5rem;
 `;
 

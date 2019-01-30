@@ -53,6 +53,7 @@
     "start": "yarn run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "gql-gen": "rm ./src/graphql-types.d.ts && gql-gen"
+    "gql-gen": "rm ./src/graphql-types.d.ts && gql-gen",
+    "clean": "rm -r ./.cache"
   }
 }

@@ -6,11 +6,17 @@ import { ContentfulCategoryEdge } from '../../graphql-types';
 import { sizes } from '../../styles';
 
 const categorySection = css`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   background: #eee;
   padding: 5%;
   margin-bottom: 5%;
+
+  @media screen and (min-width: ${sizes.SM_PHONE}px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 `;
 
 interface IProps {
