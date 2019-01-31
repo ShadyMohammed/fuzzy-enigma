@@ -3,9 +3,9 @@ import Image from 'gatsby-image';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
-import { ContentfulPost } from '../../graphql-types';
-import Tag from '../Tag';
-import { sizes, calcFontSize, TypeScale } from '../../styles';
+import { ContentfulPost } from '../graphql-types';
+import Tag from './Tag';
+import { sizes, calcFontSize, TypeScale } from '../styles';
 
 const categoryPost = css`
   margin-bottom: 5%;
@@ -59,7 +59,7 @@ const CategoryPost: React.FunctionComponent<IProps> = ({
         </div>
       </Link>
       <div css={postBody}>
-        <Tag title="cat" categorySlug={categorySlug} />
+        {<Tag title="cat" categorySlug={categorySlug} />}
         <Link to={`/${post.slug}`}>
           <h2 css={postTitle}>{post.title}</h2>
           <p css={postDescription}>

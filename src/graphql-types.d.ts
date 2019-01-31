@@ -2223,6 +2223,8 @@ export interface FilterContentfulCategory {
 
   slug?: Maybe<ContentfulCategoryConnectionSlugQueryString_2>;
 
+  description?: Maybe<ContentfulCategoryConnectionDescriptionQueryString_2>;
+
   post?: Maybe<ContentfulCategoryConnectionPostQueryList_2>;
 
   id?: Maybe<ContentfulCategoryConnectionIdQueryString_2>;
@@ -2253,6 +2255,20 @@ export interface ContentfulCategoryConnectionTitleQueryString_2 {
 }
 
 export interface ContentfulCategoryConnectionSlugQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulCategoryConnectionDescriptionQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -2624,6 +2640,8 @@ export interface FilterContentfulPost {
   internal?: Maybe<ContentfulPostConnectionInternalInputObject_2>;
 
   node_locale?: Maybe<ContentfulPostConnectionNodeLocaleQueryString_2>;
+
+  featured_post?: Maybe<ContentfulPostConnectionFeaturedPostQueryList_2>;
 }
 
 export interface ContentfulPostConnectionTitleQueryString_2 {
@@ -2659,6 +2677,8 @@ export interface ContentfulPostConnectionCategoryInputObject_2 {
 
   slug?: Maybe<ContentfulPostConnectionCategorySlugQueryString_2>;
 
+  description?: Maybe<ContentfulPostConnectionCategoryDescriptionQueryString_2>;
+
   id?: Maybe<ContentfulPostConnectionCategoryIdQueryString_2>;
 
   contentful_id?: Maybe<
@@ -2691,6 +2711,20 @@ export interface ContentfulPostConnectionCategoryTitleQueryString_2 {
 }
 
 export interface ContentfulPostConnectionCategorySlugQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionCategoryDescriptionQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -3539,6 +3573,464 @@ export interface ContentfulPostConnectionInternalOwnerQueryString_2 {
 }
 
 export interface ContentfulPostConnectionNodeLocaleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostQueryList_2 {
+  elemMatch?: Maybe<ContentfulPostConnectionFeaturedPostInputObject_2>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostInputObject_2 {
+  id?: Maybe<ContentfulPostConnectionFeaturedPostIdQueryString_2>;
+
+  contentful_id?: Maybe<
+    ContentfulPostConnectionFeaturedPostContentfulIdQueryString_2
+  >;
+
+  createdAt?: Maybe<ContentfulPostConnectionFeaturedPostCreatedAtQueryString_2>;
+
+  updatedAt?: Maybe<ContentfulPostConnectionFeaturedPostUpdatedAtQueryString_2>;
+
+  parent?: Maybe<ContentfulPostConnectionFeaturedPostParentQueryString_2>;
+
+  internal?: Maybe<ContentfulPostConnectionFeaturedPostInternalInputObject_2>;
+
+  node_locale?: Maybe<
+    ContentfulPostConnectionFeaturedPostNodeLocaleQueryString_2
+  >;
+}
+
+export interface ContentfulPostConnectionFeaturedPostIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostContentfulIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostCreatedAtQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostUpdatedAtQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostParentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostInternalInputObject_2 {
+  type?: Maybe<ContentfulPostConnectionFeaturedPostInternalTypeQueryString_2>;
+
+  contentDigest?: Maybe<
+    ContentfulPostConnectionFeaturedPostInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<ContentfulPostConnectionFeaturedPostInternalOwnerQueryString_2>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostConnectionFeaturedPostNodeLocaleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionSort {
+  fields: (Maybe<
+    ContentfulPostContentRichTextNodeConnectionSortByFieldsEnum
+  >)[];
+
+  order?: ContentfulPostContentRichTextNodeConnectionSortOrderValues;
+}
+/** Filter connection on its fields */
+export interface FilterContentfulPostContentRichTextNode {
+  content?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionContentQueryString_2
+  >;
+
+  nodeType?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionNodeTypeQueryString_2
+  >;
+
+  id?: Maybe<ContentfulPostContentRichTextNodeConnectionIdQueryString_2>;
+
+  internal?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalInputObject_2
+  >;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionNodeTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalInputObject_2 {
+  type?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalTypeQueryString_2
+  >;
+
+  mediaType?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalMediaTypeQueryString_2
+  >;
+
+  content?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalContentQueryString_2
+  >;
+
+  contentDigest?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<
+    ContentfulPostContentRichTextNodeConnectionInternalOwnerQueryString_2
+  >;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalMediaTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeConnectionInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionSort {
+  fields: (Maybe<
+    ContentfulPostDescriptionTextNodeConnectionSortByFieldsEnum
+  >)[];
+
+  order?: ContentfulPostDescriptionTextNodeConnectionSortOrderValues;
+}
+/** Filter connection on its fields */
+export interface FilterContentfulPostDescriptionTextNode {
+  id?: Maybe<ContentfulPostDescriptionTextNodeConnectionIdQueryString_2>;
+
+  description?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionDescriptionQueryString_2
+  >;
+
+  internal?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalInputObject_2
+  >;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalInputObject_2 {
+  type?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalTypeQueryString_2
+  >;
+
+  mediaType?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalMediaTypeQueryString_2
+  >;
+
+  content?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalContentQueryString_2
+  >;
+
+  contentDigest?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<
+    ContentfulPostDescriptionTextNodeConnectionInternalOwnerQueryString_2
+  >;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalMediaTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeConnectionInternalOwnerQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -4866,304 +5358,6 @@ export interface ResizeAspectRatioQueryFloat_4 {
   in?: Maybe<(Maybe<number>)[]>;
 
   nin?: Maybe<(Maybe<number>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionSort {
-  fields: (Maybe<
-    ContentfulPostContentRichTextNodeConnectionSortByFieldsEnum
-  >)[];
-
-  order?: ContentfulPostContentRichTextNodeConnectionSortOrderValues;
-}
-/** Filter connection on its fields */
-export interface FilterContentfulPostContentRichTextNode {
-  content?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionContentQueryString_2
-  >;
-
-  nodeType?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionNodeTypeQueryString_2
-  >;
-
-  id?: Maybe<ContentfulPostContentRichTextNodeConnectionIdQueryString_2>;
-
-  internal?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalInputObject_2
-  >;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionNodeTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalInputObject_2 {
-  type?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalTypeQueryString_2
-  >;
-
-  mediaType?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalMediaTypeQueryString_2
-  >;
-
-  content?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalContentQueryString_2
-  >;
-
-  contentDigest?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalContentDigestQueryString_2
-  >;
-
-  owner?: Maybe<
-    ContentfulPostContentRichTextNodeConnectionInternalOwnerQueryString_2
-  >;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalMediaTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalContentDigestQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeConnectionInternalOwnerQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionSort {
-  fields: (Maybe<
-    ContentfulPostDescriptionTextNodeConnectionSortByFieldsEnum
-  >)[];
-
-  order?: ContentfulPostDescriptionTextNodeConnectionSortOrderValues;
-}
-/** Filter connection on its fields */
-export interface FilterContentfulPostDescriptionTextNode {
-  id?: Maybe<ContentfulPostDescriptionTextNodeConnectionIdQueryString_2>;
-
-  description?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionDescriptionQueryString_2
-  >;
-
-  internal?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalInputObject_2
-  >;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionDescriptionQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalInputObject_2 {
-  type?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalTypeQueryString_2
-  >;
-
-  mediaType?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalMediaTypeQueryString_2
-  >;
-
-  content?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalContentQueryString_2
-  >;
-
-  contentDigest?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalContentDigestQueryString_2
-  >;
-
-  owner?: Maybe<
-    ContentfulPostDescriptionTextNodeConnectionInternalOwnerQueryString_2
-  >;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalMediaTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalContentDigestQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeConnectionInternalOwnerQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
 }
 
 export interface MarkdownRemarkConnectionSort {
@@ -7734,6 +7928,20 @@ export interface ContentfulCategorySlugQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>;
 }
 
+export interface ContentfulCategoryDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
 export interface ContentfulCategoryPostQueryList_2 {
   elemMatch?: Maybe<ContentfulCategoryPostInputObject_2>;
 }
@@ -8091,6 +8299,8 @@ export interface ContentfulPostCategoryInputObject_2 {
 
   slug?: Maybe<ContentfulPostCategorySlugQueryString_2>;
 
+  description?: Maybe<ContentfulPostCategoryDescriptionQueryString_2>;
+
   id?: Maybe<ContentfulPostCategoryIdQueryString_2>;
 
   contentful_id?: Maybe<ContentfulPostCategoryContentfulIdQueryString_2>;
@@ -8121,6 +8331,20 @@ export interface ContentfulPostCategoryTitleQueryString_2 {
 }
 
 export interface ContentfulPostCategorySlugQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostCategoryDescriptionQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -8939,6 +9163,408 @@ export interface ContentfulPostInternalOwnerQueryString_2 {
 }
 
 export interface ContentfulPostNodeLocaleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostQueryList_2 {
+  elemMatch?: Maybe<ContentfulPostFeaturedPostInputObject_2>;
+}
+
+export interface ContentfulPostFeaturedPostInputObject_2 {
+  id?: Maybe<ContentfulPostFeaturedPostIdQueryString_2>;
+
+  contentful_id?: Maybe<ContentfulPostFeaturedPostContentfulIdQueryString_2>;
+
+  createdAt?: Maybe<ContentfulPostFeaturedPostCreatedAtQueryString_2>;
+
+  updatedAt?: Maybe<ContentfulPostFeaturedPostUpdatedAtQueryString_2>;
+
+  parent?: Maybe<ContentfulPostFeaturedPostParentQueryString_2>;
+
+  internal?: Maybe<ContentfulPostFeaturedPostInternalInputObject_2>;
+
+  node_locale?: Maybe<ContentfulPostFeaturedPostNodeLocaleQueryString_2>;
+}
+
+export interface ContentfulPostFeaturedPostIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostContentfulIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostCreatedAtQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostUpdatedAtQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostParentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostInternalInputObject_2 {
+  type?: Maybe<ContentfulPostFeaturedPostInternalTypeQueryString_2>;
+
+  contentDigest?: Maybe<
+    ContentfulPostFeaturedPostInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<ContentfulPostFeaturedPostInternalOwnerQueryString_2>;
+}
+
+export interface ContentfulPostFeaturedPostInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostFeaturedPostNodeLocaleQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeNodeTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalInputObject_2 {
+  type?: Maybe<ContentfulPostContentRichTextNodeInternalTypeQueryString_2>;
+
+  mediaType?: Maybe<
+    ContentfulPostContentRichTextNodeInternalMediaTypeQueryString_2
+  >;
+
+  content?: Maybe<
+    ContentfulPostContentRichTextNodeInternalContentQueryString_2
+  >;
+
+  contentDigest?: Maybe<
+    ContentfulPostContentRichTextNodeInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<ContentfulPostContentRichTextNodeInternalOwnerQueryString_2>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalMediaTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostContentRichTextNodeInternalOwnerQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeIdQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeDescriptionQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalInputObject_2 {
+  type?: Maybe<ContentfulPostDescriptionTextNodeInternalTypeQueryString_2>;
+
+  mediaType?: Maybe<
+    ContentfulPostDescriptionTextNodeInternalMediaTypeQueryString_2
+  >;
+
+  content?: Maybe<
+    ContentfulPostDescriptionTextNodeInternalContentQueryString_2
+  >;
+
+  contentDigest?: Maybe<
+    ContentfulPostDescriptionTextNodeInternalContentDigestQueryString_2
+  >;
+
+  owner?: Maybe<ContentfulPostDescriptionTextNodeInternalOwnerQueryString_2>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalMediaTypeQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalContentQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalContentDigestQueryString_2 {
+  eq?: Maybe<string>;
+
+  ne?: Maybe<string>;
+
+  regex?: Maybe<string>;
+
+  glob?: Maybe<string>;
+
+  in?: Maybe<(Maybe<string>)[]>;
+
+  nin?: Maybe<(Maybe<string>)[]>;
+}
+
+export interface ContentfulPostDescriptionTextNodeInternalOwnerQueryString_2 {
   eq?: Maybe<string>;
 
   ne?: Maybe<string>;
@@ -10206,252 +10832,6 @@ export interface ResizeAspectRatioQueryFloat_3 {
   nin?: Maybe<(Maybe<number>)[]>;
 }
 
-export interface ContentfulPostContentRichTextNodeContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeNodeTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalInputObject_2 {
-  type?: Maybe<ContentfulPostContentRichTextNodeInternalTypeQueryString_2>;
-
-  mediaType?: Maybe<
-    ContentfulPostContentRichTextNodeInternalMediaTypeQueryString_2
-  >;
-
-  content?: Maybe<
-    ContentfulPostContentRichTextNodeInternalContentQueryString_2
-  >;
-
-  contentDigest?: Maybe<
-    ContentfulPostContentRichTextNodeInternalContentDigestQueryString_2
-  >;
-
-  owner?: Maybe<ContentfulPostContentRichTextNodeInternalOwnerQueryString_2>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalMediaTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalContentDigestQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostContentRichTextNodeInternalOwnerQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeIdQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeDescriptionQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalInputObject_2 {
-  type?: Maybe<ContentfulPostDescriptionTextNodeInternalTypeQueryString_2>;
-
-  mediaType?: Maybe<
-    ContentfulPostDescriptionTextNodeInternalMediaTypeQueryString_2
-  >;
-
-  content?: Maybe<
-    ContentfulPostDescriptionTextNodeInternalContentQueryString_2
-  >;
-
-  contentDigest?: Maybe<
-    ContentfulPostDescriptionTextNodeInternalContentDigestQueryString_2
-  >;
-
-  owner?: Maybe<ContentfulPostDescriptionTextNodeInternalOwnerQueryString_2>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalMediaTypeQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalContentQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalContentDigestQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
-export interface ContentfulPostDescriptionTextNodeInternalOwnerQueryString_2 {
-  eq?: Maybe<string>;
-
-  ne?: Maybe<string>;
-
-  regex?: Maybe<string>;
-
-  glob?: Maybe<string>;
-
-  in?: Maybe<(Maybe<string>)[]>;
-
-  nin?: Maybe<(Maybe<string>)[]>;
-}
-
 export interface MarkdownRemarkIdQueryString_2 {
   eq?: Maybe<string>;
 
@@ -10953,6 +11333,7 @@ export enum contentfulContentTypeGroupEnum {
 export enum ContentfulCategoryConnectionSortByFieldsEnum {
   Title = "title",
   Slug = "slug",
+  Description = "description",
   PostNode = "post___NODE",
   Id = "id",
   ContentfulId = "contentful_id",
@@ -11016,6 +11397,7 @@ export enum ContentfulImageCropFocus {
 export enum contentfulCategoryDistinctEnum {
   Title = "title",
   Slug = "slug",
+  Description = "description",
   PostNode = "post___NODE",
   Id = "id",
   ContentfulId = "contentful_id",
@@ -11031,6 +11413,7 @@ export enum contentfulCategoryDistinctEnum {
 export enum contentfulCategoryGroupEnum {
   Title = "title",
   Slug = "slug",
+  Description = "description",
   PostNode = "post___NODE",
   Id = "id",
   ContentfulId = "contentful_id",
@@ -11059,7 +11442,8 @@ export enum ContentfulPostConnectionSortByFieldsEnum {
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalOwner = "internal___owner",
-  NodeLocale = "node_locale"
+  NodeLocale = "node_locale",
+  FeaturedPostNode = "featured_post___NODE"
 }
 
 export enum contentfulPostConnectionSortOrderValues {
@@ -11083,7 +11467,8 @@ export enum contentfulPostDistinctEnum {
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalOwner = "internal___owner",
-  NodeLocale = "node_locale"
+  NodeLocale = "node_locale",
+  FeaturedPostNode = "featured_post___NODE"
 }
 
 export enum contentfulPostGroupEnum {
@@ -11102,7 +11487,90 @@ export enum contentfulPostGroupEnum {
   InternalType = "internal___type",
   InternalContentDigest = "internal___contentDigest",
   InternalOwner = "internal___owner",
-  NodeLocale = "node_locale"
+  NodeLocale = "node_locale",
+  FeaturedPostNode = "featured_post___NODE"
+}
+
+export enum contentfulPostContentRichTextNodeConnectionSortByFieldsEnum {
+  Content = "content",
+  NodeType = "nodeType",
+  Id = "id",
+  Parent = "parent",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
+}
+
+export enum contentfulPostContentRichTextNodeConnectionSortOrderValues {
+  Asc = "ASC",
+  Desc = "DESC"
+}
+
+export enum contentfulPostContentRichTextNodeDistinctEnum {
+  Content = "content",
+  NodeType = "nodeType",
+  Id = "id",
+  Parent = "parent",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
+}
+
+export enum contentfulPostContentRichTextNodeGroupEnum {
+  Content = "content",
+  NodeType = "nodeType",
+  Id = "id",
+  Parent = "parent",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
+}
+
+export enum contentfulPostDescriptionTextNodeConnectionSortByFieldsEnum {
+  Id = "id",
+  Parent = "parent",
+  Children = "children",
+  Description = "description",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
+}
+
+export enum contentfulPostDescriptionTextNodeConnectionSortOrderValues {
+  Asc = "ASC",
+  Desc = "DESC"
+}
+
+export enum contentfulPostDescriptionTextNodeDistinctEnum {
+  Id = "id",
+  Parent = "parent",
+  Children = "children",
+  Description = "description",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
+}
+
+export enum contentfulPostDescriptionTextNodeGroupEnum {
+  Id = "id",
+  Parent = "parent",
+  Children = "children",
+  Description = "description",
+  InternalType = "internal___type",
+  InternalMediaType = "internal___mediaType",
+  InternalContent = "internal___content",
+  InternalContentDigest = "internal___contentDigest",
+  InternalOwner = "internal___owner"
 }
 
 export enum ContentfulFeaturedPostConnectionSortByFieldsEnum {
@@ -11242,88 +11710,6 @@ export enum contentfulAssetGroupEnum {
   InternalOwner = "internal___owner"
 }
 
-export enum contentfulPostContentRichTextNodeConnectionSortByFieldsEnum {
-  Content = "content",
-  NodeType = "nodeType",
-  Id = "id",
-  Parent = "parent",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
-export enum contentfulPostContentRichTextNodeConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
-
-export enum contentfulPostContentRichTextNodeDistinctEnum {
-  Content = "content",
-  NodeType = "nodeType",
-  Id = "id",
-  Parent = "parent",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
-export enum contentfulPostContentRichTextNodeGroupEnum {
-  Content = "content",
-  NodeType = "nodeType",
-  Id = "id",
-  Parent = "parent",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
-export enum contentfulPostDescriptionTextNodeConnectionSortByFieldsEnum {
-  Id = "id",
-  Parent = "parent",
-  Children = "children",
-  Description = "description",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
-export enum contentfulPostDescriptionTextNodeConnectionSortOrderValues {
-  Asc = "ASC",
-  Desc = "DESC"
-}
-
-export enum contentfulPostDescriptionTextNodeDistinctEnum {
-  Id = "id",
-  Parent = "parent",
-  Children = "children",
-  Description = "description",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
-export enum contentfulPostDescriptionTextNodeGroupEnum {
-  Id = "id",
-  Parent = "parent",
-  Children = "children",
-  Description = "description",
-  InternalType = "internal___type",
-  InternalMediaType = "internal___mediaType",
-  InternalContent = "internal___content",
-  InternalContentDigest = "internal___contentDigest",
-  InternalOwner = "internal___owner"
-}
-
 export enum MarkdownRemarkConnectionSortByFieldsEnum {
   Id = "id",
   Parent = "parent",
@@ -11409,10 +11795,6 @@ export interface Query {
   allContentfulCategory?: Maybe<ContentfulCategoryConnection>;
   /** Connection to all ContentfulPost nodes */
   allContentfulPost?: Maybe<ContentfulPostConnection>;
-  /** Connection to all ContentfulFeaturedPost nodes */
-  allContentfulFeaturedPost?: Maybe<ContentfulFeaturedPostConnection>;
-  /** Connection to all ContentfulAsset nodes */
-  allContentfulAsset?: Maybe<ContentfulAssetConnection>;
   /** Connection to all contentfulPostContentRichTextNode nodes */
   allContentfulPostContentRichTextNode?: Maybe<
     ContentfulPostContentRichTextNodeConnection
@@ -11421,6 +11803,10 @@ export interface Query {
   allContentfulPostDescriptionTextNode?: Maybe<
     ContentfulPostDescriptionTextNodeConnection
   >;
+  /** Connection to all ContentfulFeaturedPost nodes */
+  allContentfulFeaturedPost?: Maybe<ContentfulFeaturedPostConnection>;
+  /** Connection to all ContentfulAsset nodes */
+  allContentfulAsset?: Maybe<ContentfulAssetConnection>;
   /** Connection to all MarkdownRemark nodes */
   allMarkdownRemark?: Maybe<MarkdownRemarkConnection>;
 
@@ -11436,13 +11822,13 @@ export interface Query {
 
   contentfulPost?: Maybe<ContentfulPost>;
 
-  contentfulFeaturedPost?: Maybe<ContentfulFeaturedPost>;
-
-  contentfulAsset?: Maybe<ContentfulAsset>;
-
   contentfulPostContentRichTextNode?: Maybe<ContentfulPostContentRichTextNode>;
 
   contentfulPostDescriptionTextNode?: Maybe<ContentfulPostDescriptionTextNode>;
+
+  contentfulFeaturedPost?: Maybe<ContentfulFeaturedPost>;
+
+  contentfulAsset?: Maybe<ContentfulAsset>;
 
   markdownRemark?: Maybe<MarkdownRemark>;
 }
@@ -11850,6 +12236,8 @@ export interface ContentfulCategory extends Node {
 
   slug?: Maybe<string>;
 
+  description?: Maybe<string>;
+
   post?: Maybe<(Maybe<ContentfulPost>)[]>;
 
   contentful_id?: Maybe<string>;
@@ -11901,6 +12289,8 @@ export interface ContentfulPost extends Node {
   internal?: Maybe<Internal_16>;
 
   node_locale?: Maybe<string>;
+
+  featured_post?: Maybe<(Maybe<ContentfulFeaturedPost>)[]>;
 }
 
 /** Node of type contentfulPostContentRichTextNode */
@@ -12177,6 +12567,36 @@ export interface Internal_16 {
   owner?: Maybe<string>;
 }
 
+/** Node of type ContentfulFeaturedPost */
+export interface ContentfulFeaturedPost extends Node {
+  /** The id of this node. */
+  id: string;
+  /** The parent of this node. */
+  parent?: Maybe<Node>;
+  /** The children of this node. */
+  children?: Maybe<(Maybe<Node>)[]>;
+
+  post?: Maybe<ContentfulPost>;
+
+  contentful_id?: Maybe<string>;
+
+  createdAt?: Maybe<Date>;
+
+  updatedAt?: Maybe<Date>;
+
+  internal?: Maybe<Internal_21>;
+
+  node_locale?: Maybe<string>;
+}
+
+export interface Internal_21 {
+  type?: Maybe<string>;
+
+  contentDigest?: Maybe<string>;
+
+  owner?: Maybe<string>;
+}
+
 export interface Internal_15 {
   type?: Maybe<string>;
 
@@ -12255,132 +12675,6 @@ export interface ContentfulPostGroupConnectionEdge {
   next?: Maybe<ContentfulPost>;
   /** The previous edge in the connection */
   previous?: Maybe<ContentfulPost>;
-}
-
-/** A connection to a list of items. */
-export interface ContentfulFeaturedPostConnection {
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** A list of edges. */
-  edges?: Maybe<(Maybe<ContentfulFeaturedPostEdge>)[]>;
-
-  totalCount?: Maybe<number>;
-
-  distinct?: Maybe<(Maybe<string>)[]>;
-
-  group?: Maybe<(Maybe<ContentfulFeaturedPostGroupConnectionConnection>)[]>;
-}
-
-/** An edge in a connection. */
-export interface ContentfulFeaturedPostEdge {
-  /** The item at the end of the edge */
-  node?: Maybe<ContentfulFeaturedPost>;
-  /** The next edge in the connection */
-  next?: Maybe<ContentfulFeaturedPost>;
-  /** The previous edge in the connection */
-  previous?: Maybe<ContentfulFeaturedPost>;
-}
-
-/** Node of type ContentfulFeaturedPost */
-export interface ContentfulFeaturedPost extends Node {
-  /** The id of this node. */
-  id: string;
-  /** The parent of this node. */
-  parent?: Maybe<Node>;
-  /** The children of this node. */
-  children?: Maybe<(Maybe<Node>)[]>;
-
-  post?: Maybe<ContentfulPost>;
-
-  contentful_id?: Maybe<string>;
-
-  createdAt?: Maybe<Date>;
-
-  updatedAt?: Maybe<Date>;
-
-  internal?: Maybe<Internal_21>;
-
-  node_locale?: Maybe<string>;
-}
-
-export interface Internal_21 {
-  type?: Maybe<string>;
-
-  contentDigest?: Maybe<string>;
-
-  owner?: Maybe<string>;
-}
-
-/** A connection to a list of items. */
-export interface ContentfulFeaturedPostGroupConnectionConnection {
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** A list of edges. */
-  edges?: Maybe<(Maybe<ContentfulFeaturedPostGroupConnectionEdge>)[]>;
-
-  field?: Maybe<string>;
-
-  fieldValue?: Maybe<string>;
-
-  totalCount?: Maybe<number>;
-}
-
-/** An edge in a connection. */
-export interface ContentfulFeaturedPostGroupConnectionEdge {
-  /** The item at the end of the edge */
-  node?: Maybe<ContentfulFeaturedPost>;
-  /** The next edge in the connection */
-  next?: Maybe<ContentfulFeaturedPost>;
-  /** The previous edge in the connection */
-  previous?: Maybe<ContentfulFeaturedPost>;
-}
-
-/** A connection to a list of items. */
-export interface ContentfulAssetConnection {
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** A list of edges. */
-  edges?: Maybe<(Maybe<ContentfulAssetEdge>)[]>;
-
-  totalCount?: Maybe<number>;
-
-  distinct?: Maybe<(Maybe<string>)[]>;
-
-  group?: Maybe<(Maybe<ContentfulAssetGroupConnectionConnection>)[]>;
-}
-
-/** An edge in a connection. */
-export interface ContentfulAssetEdge {
-  /** The item at the end of the edge */
-  node?: Maybe<ContentfulAsset>;
-  /** The next edge in the connection */
-  next?: Maybe<ContentfulAsset>;
-  /** The previous edge in the connection */
-  previous?: Maybe<ContentfulAsset>;
-}
-
-/** A connection to a list of items. */
-export interface ContentfulAssetGroupConnectionConnection {
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-  /** A list of edges. */
-  edges?: Maybe<(Maybe<ContentfulAssetGroupConnectionEdge>)[]>;
-
-  field?: Maybe<string>;
-
-  fieldValue?: Maybe<string>;
-
-  totalCount?: Maybe<number>;
-}
-
-/** An edge in a connection. */
-export interface ContentfulAssetGroupConnectionEdge {
-  /** The item at the end of the edge */
-  node?: Maybe<ContentfulAsset>;
-  /** The next edge in the connection */
-  next?: Maybe<ContentfulAsset>;
-  /** The previous edge in the connection */
-  previous?: Maybe<ContentfulAsset>;
 }
 
 /** A connection to a list of items. */
@@ -12485,6 +12779,102 @@ export interface ContentfulPostDescriptionTextNodeGroupConnectionEdge {
   next?: Maybe<ContentfulPostDescriptionTextNode>;
   /** The previous edge in the connection */
   previous?: Maybe<ContentfulPostDescriptionTextNode>;
+}
+
+/** A connection to a list of items. */
+export interface ContentfulFeaturedPostConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<ContentfulFeaturedPostEdge>)[]>;
+
+  totalCount?: Maybe<number>;
+
+  distinct?: Maybe<(Maybe<string>)[]>;
+
+  group?: Maybe<(Maybe<ContentfulFeaturedPostGroupConnectionConnection>)[]>;
+}
+
+/** An edge in a connection. */
+export interface ContentfulFeaturedPostEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<ContentfulFeaturedPost>;
+  /** The next edge in the connection */
+  next?: Maybe<ContentfulFeaturedPost>;
+  /** The previous edge in the connection */
+  previous?: Maybe<ContentfulFeaturedPost>;
+}
+
+/** A connection to a list of items. */
+export interface ContentfulFeaturedPostGroupConnectionConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<ContentfulFeaturedPostGroupConnectionEdge>)[]>;
+
+  field?: Maybe<string>;
+
+  fieldValue?: Maybe<string>;
+
+  totalCount?: Maybe<number>;
+}
+
+/** An edge in a connection. */
+export interface ContentfulFeaturedPostGroupConnectionEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<ContentfulFeaturedPost>;
+  /** The next edge in the connection */
+  next?: Maybe<ContentfulFeaturedPost>;
+  /** The previous edge in the connection */
+  previous?: Maybe<ContentfulFeaturedPost>;
+}
+
+/** A connection to a list of items. */
+export interface ContentfulAssetConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<ContentfulAssetEdge>)[]>;
+
+  totalCount?: Maybe<number>;
+
+  distinct?: Maybe<(Maybe<string>)[]>;
+
+  group?: Maybe<(Maybe<ContentfulAssetGroupConnectionConnection>)[]>;
+}
+
+/** An edge in a connection. */
+export interface ContentfulAssetEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<ContentfulAsset>;
+  /** The next edge in the connection */
+  next?: Maybe<ContentfulAsset>;
+  /** The previous edge in the connection */
+  previous?: Maybe<ContentfulAsset>;
+}
+
+/** A connection to a list of items. */
+export interface ContentfulAssetGroupConnectionConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** A list of edges. */
+  edges?: Maybe<(Maybe<ContentfulAssetGroupConnectionEdge>)[]>;
+
+  field?: Maybe<string>;
+
+  fieldValue?: Maybe<string>;
+
+  totalCount?: Maybe<number>;
+}
+
+/** An edge in a connection. */
+export interface ContentfulAssetGroupConnectionEdge {
+  /** The item at the end of the edge */
+  node?: Maybe<ContentfulAsset>;
+  /** The next edge in the connection */
+  next?: Maybe<ContentfulAsset>;
+  /** The previous edge in the connection */
+  previous?: Maybe<ContentfulAsset>;
 }
 
 /** A connection to a list of items. */
@@ -12624,24 +13014,6 @@ export interface AllContentfulPostQueryArgs {
 
   filter?: Maybe<FilterContentfulPost>;
 }
-export interface AllContentfulFeaturedPostQueryArgs {
-  skip?: Maybe<number>;
-
-  limit?: Maybe<number>;
-
-  sort?: Maybe<ContentfulFeaturedPostConnectionSort>;
-
-  filter?: Maybe<FilterContentfulFeaturedPost>;
-}
-export interface AllContentfulAssetQueryArgs {
-  skip?: Maybe<number>;
-
-  limit?: Maybe<number>;
-
-  sort?: Maybe<ContentfulAssetConnectionSort>;
-
-  filter?: Maybe<FilterContentfulAsset>;
-}
 export interface AllContentfulPostContentRichTextNodeQueryArgs {
   skip?: Maybe<number>;
 
@@ -12659,6 +13031,24 @@ export interface AllContentfulPostDescriptionTextNodeQueryArgs {
   sort?: Maybe<ContentfulPostDescriptionTextNodeConnectionSort>;
 
   filter?: Maybe<FilterContentfulPostDescriptionTextNode>;
+}
+export interface AllContentfulFeaturedPostQueryArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  sort?: Maybe<ContentfulFeaturedPostConnectionSort>;
+
+  filter?: Maybe<FilterContentfulFeaturedPost>;
+}
+export interface AllContentfulAssetQueryArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  sort?: Maybe<ContentfulAssetConnectionSort>;
+
+  filter?: Maybe<FilterContentfulAsset>;
 }
 export interface AllMarkdownRemarkQueryArgs {
   skip?: Maybe<number>;
@@ -12748,6 +13138,8 @@ export interface ContentfulCategoryQueryArgs {
 
   slug?: Maybe<ContentfulCategorySlugQueryString_2>;
 
+  description?: Maybe<ContentfulCategoryDescriptionQueryString_2>;
+
   post?: Maybe<ContentfulCategoryPostQueryList_2>;
 
   id?: Maybe<ContentfulCategoryIdQueryString_2>;
@@ -12786,6 +13178,26 @@ export interface ContentfulPostQueryArgs {
   internal?: Maybe<ContentfulPostInternalInputObject_2>;
 
   node_locale?: Maybe<ContentfulPostNodeLocaleQueryString_2>;
+
+  featured_post?: Maybe<ContentfulPostFeaturedPostQueryList_2>;
+}
+export interface ContentfulPostContentRichTextNodeQueryArgs {
+  content?: Maybe<ContentfulPostContentRichTextNodeContentQueryString_2>;
+
+  nodeType?: Maybe<ContentfulPostContentRichTextNodeNodeTypeQueryString_2>;
+
+  id?: Maybe<ContentfulPostContentRichTextNodeIdQueryString_2>;
+
+  internal?: Maybe<ContentfulPostContentRichTextNodeInternalInputObject_2>;
+}
+export interface ContentfulPostDescriptionTextNodeQueryArgs {
+  id?: Maybe<ContentfulPostDescriptionTextNodeIdQueryString_2>;
+
+  description?: Maybe<
+    ContentfulPostDescriptionTextNodeDescriptionQueryString_2
+  >;
+
+  internal?: Maybe<ContentfulPostDescriptionTextNodeInternalInputObject_2>;
 }
 export interface ContentfulFeaturedPostQueryArgs {
   post?: Maybe<ContentfulFeaturedPostPostInputObject_2>;
@@ -12826,24 +13238,6 @@ export interface ContentfulAssetQueryArgs {
   sizes?: Maybe<SizesTypeName_3>;
 
   resize?: Maybe<ResizeTypeName_3>;
-}
-export interface ContentfulPostContentRichTextNodeQueryArgs {
-  content?: Maybe<ContentfulPostContentRichTextNodeContentQueryString_2>;
-
-  nodeType?: Maybe<ContentfulPostContentRichTextNodeNodeTypeQueryString_2>;
-
-  id?: Maybe<ContentfulPostContentRichTextNodeIdQueryString_2>;
-
-  internal?: Maybe<ContentfulPostContentRichTextNodeInternalInputObject_2>;
-}
-export interface ContentfulPostDescriptionTextNodeQueryArgs {
-  id?: Maybe<ContentfulPostDescriptionTextNodeIdQueryString_2>;
-
-  description?: Maybe<
-    ContentfulPostDescriptionTextNodeDescriptionQueryString_2
-  >;
-
-  internal?: Maybe<ContentfulPostDescriptionTextNodeInternalInputObject_2>;
 }
 export interface MarkdownRemarkQueryArgs {
   id?: Maybe<MarkdownRemarkIdQueryString_2>;
@@ -13040,26 +13434,6 @@ export interface ResizeContentfulAssetArgs {
 
   background?: Maybe<string>;
 }
-export interface DistinctContentfulPostConnectionArgs {
-  field?: Maybe<ContentfulPostDistinctEnum>;
-}
-export interface GroupContentfulPostConnectionArgs {
-  skip?: Maybe<number>;
-
-  limit?: Maybe<number>;
-
-  field?: Maybe<ContentfulPostGroupEnum>;
-}
-export interface DistinctContentfulFeaturedPostConnectionArgs {
-  field?: Maybe<ContentfulFeaturedPostDistinctEnum>;
-}
-export interface GroupContentfulFeaturedPostConnectionArgs {
-  skip?: Maybe<number>;
-
-  limit?: Maybe<number>;
-
-  field?: Maybe<ContentfulFeaturedPostGroupEnum>;
-}
 export interface CreatedAtContentfulFeaturedPostArgs {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
   formatString?: Maybe<string>;
@@ -13080,15 +13454,15 @@ export interface UpdatedAtContentfulFeaturedPostArgs {
   /** Configures the locale Moment.js will use to format the date. */
   locale?: Maybe<string>;
 }
-export interface DistinctContentfulAssetConnectionArgs {
-  field?: Maybe<ContentfulAssetDistinctEnum>;
+export interface DistinctContentfulPostConnectionArgs {
+  field?: Maybe<ContentfulPostDistinctEnum>;
 }
-export interface GroupContentfulAssetConnectionArgs {
+export interface GroupContentfulPostConnectionArgs {
   skip?: Maybe<number>;
 
   limit?: Maybe<number>;
 
-  field?: Maybe<ContentfulAssetGroupEnum>;
+  field?: Maybe<ContentfulPostGroupEnum>;
 }
 export interface DistinctContentfulPostContentRichTextNodeConnectionArgs {
   field?: Maybe<ContentfulPostContentRichTextNodeDistinctEnum>;
@@ -13109,6 +13483,26 @@ export interface GroupContentfulPostDescriptionTextNodeConnectionArgs {
   limit?: Maybe<number>;
 
   field?: Maybe<ContentfulPostDescriptionTextNodeGroupEnum>;
+}
+export interface DistinctContentfulFeaturedPostConnectionArgs {
+  field?: Maybe<ContentfulFeaturedPostDistinctEnum>;
+}
+export interface GroupContentfulFeaturedPostConnectionArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  field?: Maybe<ContentfulFeaturedPostGroupEnum>;
+}
+export interface DistinctContentfulAssetConnectionArgs {
+  field?: Maybe<ContentfulAssetDistinctEnum>;
+}
+export interface GroupContentfulAssetConnectionArgs {
+  skip?: Maybe<number>;
+
+  limit?: Maybe<number>;
+
+  field?: Maybe<ContentfulAssetGroupEnum>;
 }
 export interface DistinctMarkdownRemarkConnectionArgs {
   field?: Maybe<MarkdownRemarkDistinctEnum>;

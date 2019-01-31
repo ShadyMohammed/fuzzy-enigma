@@ -1,9 +1,9 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
+import { ContentfulCategoryEdge, ContentfulPost } from '../graphql-types';
+import { sizes } from '../styles';
 import CategoryPost from './CategoryPost';
-import { ContentfulCategoryEdge } from '../../graphql-types';
-import { sizes } from '../../styles';
 
 const categorySection = css`
   display: flex;
@@ -26,7 +26,7 @@ interface IProps {
 const CategorySection: React.FunctionComponent<IProps> = ({ category }) => {
   return (
     <div css={categorySection}>
-      {category.node.post.map(_post => (
+      {category.node.post.map((_post: ContentfulPost) => (
         <CategoryPost
           post={_post}
           categorySlug={category.node.slug}

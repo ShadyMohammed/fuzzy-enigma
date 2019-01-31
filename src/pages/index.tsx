@@ -3,12 +3,12 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 
-import { globalStyles, theme, fluidFont } from '../styles';
+import { ContentfulCategoryEdge } from '../graphql-types';
+import { globalStyles, theme } from '../styles';
 import SEO from '../components/Seo';
 import Layout from '../components/Layout';
 import FeaturedSection from '../components/FeaturedSection';
 import CategorySection from '../components/CategorySection';
-import { ContentfulCategoryEdge } from '../graphql-types';
 
 const IndexPage: React.FunctionComponent<{}> = () => {
   return (

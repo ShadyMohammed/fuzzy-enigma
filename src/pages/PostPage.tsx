@@ -5,7 +5,7 @@ import { css, Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 
 import { ContentfulPost } from '../graphql-types';
-import { theme, globalStyles, calcFontSize, TypeScale } from '../styles';
+import { theme, globalStyles } from '../styles';
 import SEO from '../components/Seo';
 import Layout from '../components/Layout';
 import PostPageHeader from '../components/PostPageHeader';
@@ -57,7 +57,7 @@ export const query = graphql`
         }
       }
       featuredImage {
-        fluid {
+        fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
