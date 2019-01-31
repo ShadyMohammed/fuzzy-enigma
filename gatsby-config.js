@@ -1,4 +1,36 @@
 require('dotenv').config();
+
+const myQuery = `{
+  allSitePage {
+    edges {
+      node {
+        # try to find a unique id for each node
+        # if this field is absent, it's going to
+        # be inserted by Algolia automatically
+        # and will be less simple to update etc.
+        objectID: id
+        component
+        path
+        componentChunkName
+        jsonName
+        internal {
+          type
+          contentDigest
+          owner
+        }
+      }
+    }
+  }
+}`;
+
+const queries = [
+  {
+    query: myQuery,
+    transformer: ({ data }) => data.allSitePage.edges.map(({ node }) => node), // optional
+    indexName: 'index name to target' // overrides main index name, optional
+  }
+];
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -60,6 +92,16 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000 // default: 1000
       }
     },
     `gatsby-plugin-typescript`

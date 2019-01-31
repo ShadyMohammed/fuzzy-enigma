@@ -59,7 +59,7 @@ const CategoryPage: React.FunctionComponent<IProps> = ({ data }) => {
         </Helmet>
         <SEO
           title={contentfulCategory.title}
-          // description={contentfulCategory.description}
+          description={contentfulCategory.description}
         />
         <CatPageCategorySection category={contentfulCategory} />
       </Layout>
@@ -72,7 +72,7 @@ export const query = graphql`
     contentfulCategory(slug: { eq: $slug }) {
       title
       slug
-      # description
+      description
       post {
         title
         slug
