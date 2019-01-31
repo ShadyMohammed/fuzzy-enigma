@@ -27,7 +27,11 @@ const CategorySection: React.FunctionComponent<IProps> = ({ category }) => {
   return (
     <div css={categorySection}>
       {category.node.post.map(_post => (
-        <CategoryPost post={_post} key={_post.slug} />
+        <CategoryPost
+          post={_post}
+          categorySlug={category.node.slug}
+          key={_post.slug}
+        />
       ))}
     </div>
   );

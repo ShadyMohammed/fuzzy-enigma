@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-const paragraph = css``;
+const heading1 = css``;
 
 export const theme = {
   colors: {

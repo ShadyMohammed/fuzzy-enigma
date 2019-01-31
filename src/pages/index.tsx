@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 
-import { globalStyles, theme } from '../styles';
+import { globalStyles, theme, fluidFont } from '../styles';
 import SEO from '../components/Seo';
 import Layout from '../components/Layout';
 import FeaturedSection from '../components/FeaturedSection';

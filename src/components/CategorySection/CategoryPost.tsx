@@ -1,17 +1,15 @@
 import React from 'react';
 import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
 import { ContentfulPost } from '../../graphql-types';
 import Tag from '../Tag';
-import { sizes } from '../../styles';
+import { sizes, calcFontSize, TypeScale } from '../../styles';
 
 const categoryPost = css`
   margin-bottom: 5%;
-
-  @media screen and (min-width: ${sizes.SM_PHONE}px) {
-    max-width: 45%;
-  }
+;  
 
   @media screen and (min-width: ${sizes.PHONE}px) {
     max-width: 47.5%;
@@ -23,6 +21,7 @@ const categoryPost = css`
 
   @media screen and (min-width: ${sizes.DESKTOP}px) {
     max-width: 22.5%;
+    margin-bottom: 0;
   }
 `;
 
@@ -45,20 +44,28 @@ const postDescription = css``;
 
 interface IProps {
   post: ContentfulPost;
+  categorySlug: string;
 }
 
-const CategoryPost: React.FunctionComponent<IProps> = ({ post }) => {
+const CategoryPost: React.FunctionComponent<IProps> = ({
+  post,
+  categorySlug
+}) => {
   return (
     <div css={categoryPost}>
-      <div css={postImageWrapper}>
-        <Image fluid={post.featuredImage.fluid} />
-      </div>
+      <Link to={`/${post.slug}`}>
+        <div css={postImageWrapper}>
+          <Image fluid={post.featuredImage.fluid} />
+        </div>
+      </Link>
       <div css={postBody}>
-        <Tag title="cat" categorySlug="asdads" />
-        <h2 css={postTitle}>{post.title}</h2>
-        <p css={postDescription}>
-          {post.description.childMarkdownRemark.excerpt}
-        </p>
+        <Tag title="cat" categorySlug={categorySlug} />
+        <Link to={`/${post.slug}`}>
+          <h2 css={postTitle}>{post.title}</h2>
+          <p css={postDescription}>
+            {post.description.childMarkdownRemark.excerpt}
+          </p>
+        </Link>
       </div>
     </div>
   );

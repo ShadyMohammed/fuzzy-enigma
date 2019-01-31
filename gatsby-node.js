@@ -1,7 +1,7 @@
 const path = require('path');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const templatesPath = './src/components';
+  const templatesPath = './src/pages';
   const loadCategories = new Promise((resolve, reject) => {
     graphql(`
       {
@@ -17,6 +17,15 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       if (result.error) reject(result.error);
       const categories = result.data.allContentfulCategory.edges;
+      categories.forEach(({ node }) => {
+        createPage({
+          path: `/categories/${node.slug}`,
+          component: path.resolve(`${templatesPath}/CategoryPage.tsx`),
+          context: {
+            slug: node.slug
+          }
+        });
+      });
       resolve();
     });
   });
@@ -39,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
       posts.forEach(({ node }) => {
         createPage({
           path: `/${node.slug}`,
-          component: path.resolve(`${templatesPath}/Post.tsx`),
+          component: path.resolve(`${templatesPath}/PostPage.tsx`),
           context: {
             slug: node.slug
           }

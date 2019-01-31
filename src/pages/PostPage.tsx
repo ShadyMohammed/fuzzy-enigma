@@ -1,9 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { css, Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+
+import { ContentfulPost } from '../graphql-types';
+import { theme, globalStyles, calcFontSize, TypeScale } from '../styles';
 import SEO from '../components/Seo';
 import Layout from '../components/Layout';
-import { graphql } from 'gatsby';
-import { ContentfulPost } from '../graphql-types';
+import PostPageHeader from '../components/PostPageHeader';
+
+const postPage = css`
+  padding: 0 5%;
+`;
 
 interface IProps {
   data: {
@@ -12,21 +21,29 @@ interface IProps {
 }
 
 const PostPage: React.FunctionComponent<IProps> = ({ data }) => {
-  const { description, title, slug } = data.contentfulPost;
-  console.log(title);
+  const { description, title, category, featuredImage } = data.contentfulPost;
   return (
-    <Layout>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      <SEO title="POST" description="" />
-      <h1>{title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: description.childMarkdownRemark.html
-        }}
-      />
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
+      <Layout>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
+        <SEO title="POST" description="" />
+        <PostPageHeader
+          title={title}
+          categoryTitle={category.title}
+          categorySlug={category.slug}
+          image={featuredImage.fluid}
+        />
+        <div
+          css={postPage}
+          dangerouslySetInnerHTML={{
+            __html: description.childMarkdownRemark.html
+          }}
+        />
+      </Layout>
+    </ThemeProvider>
   );
 };
 
@@ -34,11 +51,19 @@ export const query = graphql`
   query PostQuery($slug: String) {
     contentfulPost(slug: { eq: $slug }) {
       title
-      slug
       description {
         childMarkdownRemark {
           html
         }
+      }
+      featuredImage {
+        fluid {
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+      }
+      category {
+        title
+        slug
       }
     }
   }
