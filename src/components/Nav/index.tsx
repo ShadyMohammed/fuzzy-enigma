@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
+import { css, Global } from '@emotion/core';
 import Image from 'gatsby-image';
 import Helmet from 'react-helmet';
 
@@ -21,6 +22,16 @@ const MenuIcon = styled.span`
   @media screen and (min-width: ${sizes.PHONE}px) {
     display: none;
   }
+`;
+
+const lockBody = css`
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+`;
+
+const releaseBody = css`
+  overflow: auto;
+  -webkit-overflow-scrolling: auto;
 `;
 
 interface IState {
@@ -45,13 +56,9 @@ class Nav extends Component<{}, IState> {
     const { isHamburgerMenuOpen } = this.state;
     return (
       <>
-        <Helmet
-          bodyAttributes={{
-            style: isHamburgerMenuOpen
-              ? 'overflow: hidden; -webkit-overflow-scrolling: touch;'
-              : 'overflow: auto; -webkit-overflow-scrolling: auto'
-          }}
-        />
+        <Helmet>
+          <body class={isHamburgerMenuOpen ? 'asd' : 'asdasd'} />
+        </Helmet>
         <StyledNav>
           <LogoWrapper>
             <span>Logo</span>

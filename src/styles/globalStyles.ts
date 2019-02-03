@@ -1,5 +1,4 @@
 import { css } from '@emotion/core';
-import { sizes } from './theme';
 import { calcFontSize, TypeScale } from './typography';
 
 export const globalStyles = css`
@@ -32,7 +31,6 @@ export const globalStyles = css`
 
   h1 {
     font-size: ${calcFontSize({ size: TypeScale.XXL })};
-    /* line-height: 1.5; */
   }
 
   h2 {

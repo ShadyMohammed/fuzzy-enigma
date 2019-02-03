@@ -56,8 +56,11 @@ interface IProps {
 }
 
 const NavMenu: React.FunctionComponent<IProps> = ({ isHamburgerMenuOpen }) => {
-  return (
-    (window.innerWidth >= sizes.PHONE || isHamburgerMenuOpen) && (
+  if (
+    (typeof window !== 'undefined' && window.innerWidth >= sizes.PHONE) ||
+    isHamburgerMenuOpen
+  ) {
+    return (
       <StyledNavMenu>
         {menuItems.map(item => (
           <MenuItem key={item}>
@@ -67,8 +70,9 @@ const NavMenu: React.FunctionComponent<IProps> = ({ isHamburgerMenuOpen }) => {
           </MenuItem>
         ))}
       </StyledNavMenu>
-    )
-  );
+    );
+  }
+  return null;
 };
 
 export default NavMenu;

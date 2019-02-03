@@ -26,11 +26,11 @@ const FeaturedSection: React.FunctionComponent<{}> = () => {
   return (
     <StaticQuery
       query={query}
-      render={({ allContentfulPost: data }) => {
-        const { edges }: { edges: ContentfulPostEdge[] } = data;
+      render={({ posts, featuredPost }) => {
+        const { edges }: { edges: ContentfulPostEdge[] } = posts;
         return (
           <StyledFeaturedSection>
-            <FeaturedPost />
+            <FeaturedPost post={featuredPost.post} />
             <RecentPosts>
               {edges.map(({ node }) => (
                 <PostCard post={node} key={node.slug} />
@@ -42,9 +42,13 @@ const FeaturedSection: React.FunctionComponent<{}> = () => {
     />
   );
 };
-export const query = graphql`
-  query recentPosts {
-    allContentfulPost(limit: 3, sort: { fields: createdAt, order: DESC }) {
+
+const query = graphql`
+  {
+    posts: allContentfulPost(
+      limit: 3
+      sort: { fields: createdAt, order: DESC }
+    ) {
       edges {
         node {
           featuredImage {
@@ -64,6 +68,27 @@ export const query = graphql`
               excerpt(truncate: true)
             }
           }
+        }
+      }
+    }
+
+    featuredPost: contentfulFeaturedPost {
+      post {
+        title
+        slug
+        description {
+          childMarkdownRemark {
+            excerpt
+          }
+        }
+        featuredImage {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp_noBase64
+          }
+        }
+        category {
+          title
+          slug
         }
       }
     }
