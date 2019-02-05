@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
-import { css, Global } from '@emotion/core';
+import { css } from '@emotion/core';
 import Image from 'gatsby-image';
 import Helmet from 'react-helmet';
 
